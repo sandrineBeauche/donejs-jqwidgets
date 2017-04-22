@@ -1,0 +1,9 @@
+{
+  "generator-donejs": {
+    "promptValues": {
+      "authorName": "Sandrine Beauche",
+      "authorEmail": "sandrine.beauche@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
