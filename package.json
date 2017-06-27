@@ -57,25 +57,68 @@
     ],
     "directories": {
       "lib": "src"
+    },
+    "paths": {
+      "jquery": "node_modules/jquery/dist/jquery.js",
+      "jqwidgets/*": "node_modules/jqwidgets-framework/jqwidgets/*.js"
+    },
+    "meta": {
+      "jqwidgets/jqxcore": {
+        "format": "global",
+        "deps": [
+          "jquery"
+        ]
+      },
+      "jqwidgets/jqxbuttons": {
+        "format": "global",
+        "deps": [
+          "jquery"
+        ]
+      },
+      "jqwidgets/jqx-all": {
+        "format": "global",
+        "deps": [
+          "jquery"
+        ]
+      }
     }
   },
   "dependencies": {
-    "can-component": "^3.0.7",
-    "can-define": "^1.0.17",
-    "can-stache": "^3.0.20",
-    "can-view-autorender": "^3.0.4",
-    "cssify": "^0.6.0",
+    "can-component": "^3.1.0",
+    "can-compute": "^3.2.0",
+    "can-connect": "^1.5.2",
+    "can-construct": "^3.2.0",
+    "can-control": "^3.1.0",
+    "can-define": "^1.2.3",
+    "can-observation": "^3.2.0",
+    "can-route": "^3.1.0",
+    "can-route-pushstate": "^3.1.0",
+    "can-set": "^1.3.0",
+    "can-simple-map": "^3.2.0",
+    "can-stache": "^3.1.0",
+    "can-stache-bindings": "^3.3.0",
+    "can-types": "^1.1.0",
+    "can-view-autorender": "^3.1.0",
+    "can-view-live": "^3.1.0",
+    "can-view-scope": "^3.2.0",
+    "can-view-target": "^3.1.0",
+    "can-zone": "^0.6.9",
+    "done-autorender": "^1.1.0",
+    "done-component": "^1.0.0",
+    "done-css": "^3.0.1",
+    "done-serve": "^1.3.0",
+    "generator-donejs": "^1.0.5",
+    "jquery": "^3.2.1",
+    "jqwidgets-framework": "^4.6.4",
+    "steal": "^1.5.4",
     "steal-less": "^1.2.0",
-    "steal-stache": "^3.0.5"
+    "steal-stache": "^3.1.0"
   },
   "devDependencies": {
-    "jshint": "^2.9.1",
-    "steal": "^1.3.1",
-    "steal-qunit": "^1.0.1",
-    "steal-tools": "^1.2.0",
-    "testee": "^0.3.0",
-    "generator-donejs": "^1.0.0",
     "donejs-cli": "^1.0.0",
-    "done-serve": "^1.0.0"
+    "jshint": "^2.9.5",
+    "steal-qunit": "^1.0.1",
+    "steal-tools": "^1.3.6",
+    "testee": "^0.3.2"
   }
 }
