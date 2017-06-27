@@ -19,7 +19,7 @@ import view from './jqxButton.stache';
 
 
 export const ViewModel = DefineMap.extend({
-  
+
 });
 
 export default Component.extend({
@@ -34,6 +34,7 @@ export default Component.extend({
     }
   },
   init: function(element){
-    $(element.firstElementChild).jqxButton({ width: 120, height: 40 });
+    let args = this.viewModel.serialize();
+    $(element.firstElementChild).jqxButton(args);
   }
 });
