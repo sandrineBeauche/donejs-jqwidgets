@@ -19,9 +19,7 @@ import view from './jqxButton.stache';
 
 
 export const ViewModel = DefineMap.extend({
-  message: {
-    value: 'Click me'
-  }
+  
 });
 
 export default Component.extend({
