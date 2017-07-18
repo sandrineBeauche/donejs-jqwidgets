@@ -1,63 +1,53 @@
 {
   "name": "donejs-jqwidgets",
   "version": "0.0.0",
-  "description": "A jqwidgets wrapper for donejs",
+  "description": "An awesome DoneJS app",
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sandrineBeauche/donejs-jqwidgets.git"
+    "url": "git+https://github.com/donejs-user/essai.git"
   },
   "author": {
-    "name": "Sandrine Beauche",
-    "email": "sandrine.beauche@gmail.com",
+    "name": "",
+    "email": "",
     "url": ""
   },
+  "private": true,
   "scripts": {
-    "preversion": "npm test && npm run build",
-    "version": "git commit -am \"Update version number\" && git checkout -b release && git add -f dist/",
-    "postpublish": "git push --tags && git checkout master && git branch -D release && git push",
-    "testee": "testee test.html --browsers firefox",
-    "test": "npm run jshint && npm run testee",
-    "jshint": "jshint ./*.js ./src/ --config",
-    "release:patch": "npm version patch && npm publish",
-    "release:minor": "npm version minor && npm publish",
-    "release:major": "npm version major && npm publish",
-    "build": "node build.js",
-    "develop": "done-serve --static --develop --port 8080"
+    "test": "testee test.html --browsers firefox --reporter Spec",
+    "start": "done-serve --port 8080",
+    "develop": "done-serve --develop --port 8080",
+    "build": "node build"
   },
-  "main": "dist/cjs/donejs-jqwidgets",
-  "browser": {
-    "transform": [
-      "cssify"
-    ]
-  },
-  "browserify": {
-    "transform": [
-      "cssify"
-    ]
-  },
+  "main": "donejs-jqwidgets/index.stache!done-autorender",
+  "files": [
+    "src"
+  ],
   "keywords": [
-    "jqwidgets",
-    "donejs"
+    "",
+    "donejs-app"
   ],
   "steal": {
-    "main": "donejs-jqwidgets",
-    "configDependencies": [
-      "live-reload"
-    ],
-    "npmIgnore": [
-      "testee",
-      "generator-donejs",
-      "donejs-cli",
-      "steal-tools"
-    ],
-    "plugins": [
-      "steal-less",
-      "steal-stache"
-    ],
+    "main": "donejs-jqwidgets/index.stache!done-autorender",
     "directories": {
       "lib": "src"
     },
+    "configDependencies": [
+      "live-reload",
+      "node_modules/can-zone/register"
+    ],
+    "plugins": [
+      "done-css",
+      "done-component",
+      "steal-less",
+      "steal-stache"
+    ],
+    "envs": {
+      "server-production": {
+        "renderingBaseURL": "/dist"
+      }
+    },
+    "serviceBaseURL": "",
     "paths": {
       "jquery": "node_modules/jquery/dist/jquery.js",
       "jqwidgets/*": "node_modules/jqwidgets-framework/jqwidgets/*.js"
@@ -85,40 +75,32 @@
   },
   "dependencies": {
     "can-component": "^3.1.0",
-    "can-compute": "^3.2.0",
-    "can-connect": "^1.5.2",
-    "can-construct": "^3.2.0",
-    "can-control": "^3.1.0",
-    "can-define": "^1.2.3",
-    "can-observation": "^3.2.0",
-    "can-route": "^3.1.0",
-    "can-route-pushstate": "^3.1.0",
-    "can-set": "^1.3.0",
-    "can-simple-map": "^3.2.0",
-    "can-stache": "^3.1.0",
-    "can-stache-bindings": "^3.3.0",
-    "can-types": "^1.1.0",
+    "can-connect": "^1.5.5",
+    "can-define": "^1.0.17",
+    "can-route": "^3.0.8",
+    "can-route-pushstate": "^3.0.3",
+    "can-set": "^1.1.0",
+    "can-stache": "^3.0.20",
     "can-view-autorender": "^3.1.0",
-    "can-view-live": "^3.1.0",
-    "can-view-scope": "^3.2.0",
-    "can-view-target": "^3.1.0",
-    "can-zone": "^0.6.9",
-    "done-autorender": "^1.1.0",
+    "can-zone": "^0.6.6",
+    "done-autorender": "^1.2.0",
     "done-component": "^1.0.0",
-    "done-css": "^3.0.1",
-    "done-serve": "^1.3.0",
-    "generator-donejs": "^1.0.5",
+    "done-css": "^3.0.0",
+    "done-serve": "^1.0.0",
+    "generator-donejs": "^1.0.0",
     "jquery": "^3.2.1",
     "jqwidgets-framework": "^4.6.4",
-    "steal": "^1.5.4",
+    "steal": "^1.3.1",
     "steal-less": "^1.2.0",
-    "steal-stache": "^3.1.0"
+    "steal-stache": "^3.0.5"
   },
   "devDependencies": {
+    "can-fixture": "^1.0.13",
     "donejs-cli": "^1.0.0",
-    "jshint": "^2.9.5",
+    "funcunit": "^3.2.0",
     "steal-qunit": "^1.0.1",
-    "steal-tools": "^1.3.6",
-    "testee": "^0.3.2"
-  }
+    "steal-tools": "^1.2.0",
+    "testee": "^0.3.0"
+  },
+  "license": "MIT"
 }
