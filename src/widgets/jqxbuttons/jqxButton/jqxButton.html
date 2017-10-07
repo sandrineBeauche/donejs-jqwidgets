@@ -1,6 +1,6 @@
-<script type="text/stache" can-autorender id="button"  message="Hi">
+<script type="text/stache" can-autorender id="button">
   <can-import from="donejs-jqwidgets/widgets/jqxbuttons/jqxButton/" />
-  <jqxButton {width}='120' {height}='40'>{{message}}</jqxButton>
+  <jqxButton width:from='120' height:from='40' on:click="buttonCallback(%viewModel)">{{message}}</jqxButton>
 </script>
 <script src="../../../../node_modules/steal/steal.js"
         main="@empty">
@@ -10,9 +10,13 @@
      import DefineMap from 'can-define/map/';
      import autorender from "can-view-autorender";
 
+     var model = canViewModel($("#button"));
+     model.message = "Hi!";
+
      autorender(function(){
        var model = canViewModel($("#button"));
-       console.log(model.message);
-       model.message = "coucou";
+       model.buttonCallback = function(vm){
+         vm.width = 200;
+       };
      });
 </script>
