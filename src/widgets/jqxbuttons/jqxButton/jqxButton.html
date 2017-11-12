@@ -1,6 +1,6 @@
 <script type="text/stache" can-autorender id="button">
   <can-import from="donejs-jqwidgets/widgets/jqxbuttons/jqxButton/" />
-  <jqxButton width:from='120' height:from='40' on:click="buttonCallback(%viewModel)">{{message}}</jqxButton>
+  <jqxButton jqxwidth:from='120' jqxheight:from='40' on:click="buttonCallback(%viewModel)">{{message}}</jqxButton>
 </script>
 <script src="../../../../node_modules/steal/steal.js"
         main="@empty">
@@ -16,7 +16,9 @@
      autorender(function(){
        var model = canViewModel($("#button"));
        model.buttonCallback = function(vm){
-         vm.width = 200;
+         var w = vm.jqxGet("width");
+         w = w + 100;
+         vm.jqxSet("width", w);
        };
      });
 </script>

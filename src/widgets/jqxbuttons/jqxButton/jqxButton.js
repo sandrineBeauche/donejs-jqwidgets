@@ -6,21 +6,22 @@ import Component from 'can-component';
 import './jqxButton.less';
 import view from './jqxButton.stache';
 
-import ControlComp from '../../defaultController.js';
+import jqwControl from '../../jqwController.js';
+import jqwViewModel from '../../jqwViewModel.js';
 
-var jqxFunc = function(el, args){
-  $(el).jqxButton(args);
-}
-
-ControlComp.setNewVal = jqxFunc
+export const ViewModel = jqwViewModel.extend({},{
+  jqxFunc: function(el, args){
+    return $(el).jqxButton(args);
+  }
+});
 
 
 export default Component.extend({
   tag: 'jqxButton',
+  ViewModel: ViewModel,
   view: view,
-  events: ControlComp,
+  events: jqwControl,
   init: function(element){
-    let args = this.viewModel.serialize();
-    jqxFunc(element.firstElementChild, args);
+    this.viewModel.build(element.firstElementChild);
   }
 });
