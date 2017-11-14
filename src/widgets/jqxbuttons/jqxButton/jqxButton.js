@@ -3,11 +3,10 @@ import '../jqxbuttons.js';
 
 import Component from 'can-component';
 
-import './jqxButton.less';
 import view from './jqxButton.stache';
 
-import jqwControl from '../../jqwController.js';
-import jqwViewModel from '../../jqwViewModel.js';
+import jqwControl from '../../jqwController/jqwController.js';
+import jqwViewModel from '../../jqwViewModel/jqwViewModel.js';
 
 export const ViewModel = jqwViewModel.extend({},{
   jqxFunc: function(el, args){
