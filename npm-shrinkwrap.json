@@ -188,6 +188,12 @@
       "from": "assert-plus@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/assert-plus/-/assert-plus-1.0.0.tgz"
     },
+    "assertion-error": {
+      "version": "1.0.2",
+      "from": "assertion-error@>=1.0.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/assertion-error/-/assertion-error-1.0.2.tgz",
+      "dev": true
+    },
     "ast-types": {
       "version": "0.9.13",
       "from": "ast-types@>=0.9.11 <0.10.0",
@@ -641,9 +647,14 @@
       "resolved": "https://registry.npmjs.org/can-control/-/can-control-3.2.2.tgz"
     },
     "can-define": {
-      "version": "1.5.0",
-      "from": "can-define@>=1.4.5 <2.0.0",
-      "resolved": "https://registry.npmjs.org/can-define/-/can-define-1.5.0.tgz"
+      "version": "1.5.4",
+      "from": "can-define@1.5.4",
+      "resolved": "https://registry.npmjs.org/can-define/-/can-define-1.5.4.tgz"
+    },
+    "can-define-lazy-value": {
+      "version": "1.0.1",
+      "from": "can-define-lazy-value@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/can-define-lazy-value/-/can-define-lazy-value-1.0.1.tgz"
     },
     "can-deparam": {
       "version": "1.0.1",
@@ -786,6 +797,18 @@
       "from": "can-symbol@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/can-symbol/-/can-symbol-1.2.0.tgz"
     },
+    "can-test-helpers": {
+      "version": "1.1.0",
+      "from": "can-test-helpers@>=1.1.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/can-test-helpers/-/can-test-helpers-1.1.0.tgz",
+      "dependencies": {
+        "can-util": {
+          "version": "3.10.12",
+          "from": "can-util@>=3.10.12 <4.0.0",
+          "resolved": "https://registry.npmjs.org/can-util/-/can-util-3.10.12.tgz"
+        }
+      }
+    },
     "can-types": {
       "version": "1.1.3",
       "from": "can-types@>=1.1.0 <2.0.0",
@@ -873,6 +896,12 @@
       "dev": true,
       "optional": true
     },
+    "chai": {
+      "version": "4.1.2",
+      "from": "chai@latest",
+      "resolved": "https://registry.npmjs.org/chai/-/chai-4.1.2.tgz",
+      "dev": true
+    },
     "chainsaw": {
       "version": "0.1.0",
       "from": "chainsaw@>=0.1.0 <0.2.0",
@@ -883,6 +912,12 @@
       "version": "1.1.3",
       "from": "chalk@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz"
+    },
+    "check-error": {
+      "version": "1.0.2",
+      "from": "check-error@>=1.0.1 <2.0.0",
+      "resolved": "https://registry.npmjs.org/check-error/-/check-error-1.0.2.tgz",
+      "dev": true
     },
     "chokidar": {
       "version": "1.7.0",
@@ -1251,6 +1286,12 @@
       "version": "1.2.0",
       "from": "decamelize@>=1.1.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz",
+      "dev": true
+    },
+    "deep-eql": {
+      "version": "3.0.1",
+      "from": "deep-eql@>=3.0.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/deep-eql/-/deep-eql-3.0.1.tgz",
       "dev": true
     },
     "deep-equal": {
@@ -1902,6 +1943,12 @@
       "version": "1.0.2",
       "from": "get-caller-file@>=1.0.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-1.0.2.tgz",
+      "dev": true
+    },
+    "get-func-name": {
+      "version": "2.0.0",
+      "from": "get-func-name@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/get-func-name/-/get-func-name-2.0.0.tgz",
       "dev": true
     },
     "get-stream": {
@@ -3474,6 +3521,12 @@
       "from": "path-type@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/path-type/-/path-type-2.0.0.tgz"
     },
+    "pathval": {
+      "version": "1.1.0",
+      "from": "pathval@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/pathval/-/pathval-1.1.0.tgz",
+      "dev": true
+    },
     "pbkdf2": {
       "version": "3.0.14",
       "from": "pbkdf2@>=3.0.3 <4.0.0",
@@ -4244,6 +4297,12 @@
       "from": "steal-less@>=1.2.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/steal-less/-/steal-less-1.2.0.tgz"
     },
+    "steal-mocha": {
+      "version": "1.0.0",
+      "from": "steal-mocha@latest",
+      "resolved": "https://registry.npmjs.org/steal-mocha/-/steal-mocha-1.0.0.tgz",
+      "dev": true
+    },
     "steal-parse-amd": {
       "version": "1.0.0",
       "from": "steal-parse-amd@>=1.0.0 <2.0.0",
@@ -4435,7 +4494,7 @@
     },
     "testee": {
       "version": "0.3.2",
-      "from": "testee@>=0.3.0 <0.4.0",
+      "from": "https://registry.npmjs.org/testee/-/testee-0.3.2.tgz",
       "resolved": "https://registry.npmjs.org/testee/-/testee-0.3.2.tgz",
       "dev": true,
       "dependencies": {
@@ -4589,6 +4648,12 @@
       "version": "0.3.2",
       "from": "type-check@>=0.3.2 <0.4.0",
       "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.3.2.tgz",
+      "dev": true
+    },
+    "type-detect": {
+      "version": "4.0.5",
+      "from": "type-detect@>=4.0.0 <5.0.0",
+      "resolved": "https://registry.npmjs.org/type-detect/-/type-detect-4.0.5.tgz",
       "dev": true
     },
     "type-is": {
